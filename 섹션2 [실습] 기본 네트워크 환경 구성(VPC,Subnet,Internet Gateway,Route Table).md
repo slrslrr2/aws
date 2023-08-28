@@ -11,15 +11,6 @@
 <body>
 <!--StartFragment-->
 
-Name | IPv4 CIDR
--- | --
-public-subnet-a1 | 10.0.1.0/24
-public-subnet-c1 | 10.0.2.0/24
-private-subnet-a1 | 10.0.3.0/24
-private-subnet-c1 | 10.0.4.0/24
-private-subnet-a2 | 10.0.5.0/24
-private-subnet-c2 | 10.0.6.0/24
-
 
 <!-- notionvc: 18340e09-21a9-407c-b52d-0ca0421046f9 --><!--EndFragment-->
 </body>
