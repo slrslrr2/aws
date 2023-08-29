@@ -80,3 +80,18 @@ private-subnet-c2 | 10.0.6.0/24
 <br><br>
 <img width="730" alt="7" src="https://github.com/slrslrr2/aws/assets/58017318/5dec34bb-0580-46fe-8f10-d2c424c273c2">
 
+
+<br>
+
+-----
+
+<br>
+
+### 3. Internet Gateway
+
+<img width="826" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/6697dc19-6742-4783-9df6-8efbb2c99cd7">
+
+인터넷게이트웨이가 어떤 VPC의 Gateway로 할 것인지 Attach(연결) 한다.
+
+<img width="782" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/0095da7b-b0bb-40e5-8398-394f06070b08">
+
