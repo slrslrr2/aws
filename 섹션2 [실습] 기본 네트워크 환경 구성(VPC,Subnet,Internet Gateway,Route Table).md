@@ -95,3 +95,50 @@ private-subnet-c2 | 10.0.6.0/24
 
 <img width="782" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/0095da7b-b0bb-40e5-8398-394f06070b08">
 
+
+
+<br>
+
+-----
+
+<br>
+
+### 4. 라우터 Table 설정
+
+서브넷에 위치한 EC2의 Destination에 따라 규칙을 설정해 놓는 테이블이다.
+
+<html>
+<body>
+<!--StartFragment-->
+Name | IPv4 CIDR | Route Table
+-- | -- | --
+public-subnet-a1 | 10.0.1.0/24 | public-subnet-rt
+public-subnet-c1 | 10.0.2.0/24 | 위와 동일
+private-subnet-a1 | 10.0.3.0/24 | private-subnet-a1-rt
+private-subnet-c1 | 10.0.4.0/24 | private-subnet-c1-rt
+private-subnet-a2 | 10.0.5.0/24 | private-subnet-a2-rt
+private-subnet-c2 | 10.0.6.0/24 | private-subnet-c2-rt
+
+
+
+</body>
+</html>
+
+#### public-subnet-rt
+
+
+
+<img width="832" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/53a72ea3-1e03-4bd3-b5a6-9d0081f6bcff">
+
+생성 후 , Public을 연결해준다.
+
+
+<img width="1259" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/472e5e80-3df8-48ef-b179-70a6c2f34801">
+
+또한 위 연결된 Public Subnet들이 Internet Gateway를 연결하여,
+외부로 향하는 트래픽은 IntetnetGateway와 통신 가능하도록 설정한다.
+
+
+
+<img width="1247" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/728de63e-ba4e-4ad1-b3ef-1dd61db32d6c">
+
