@@ -48,23 +48,17 @@ DNS HostName을 활성화 한다.
 ### 2. 서브넷 생성
 
 
-<html>
-<body>
-<!--StartFragment-->
 
-Name | IPv4 CIDR
--- | --
-public-subnet-a1 | 10.0.1.0/24
-public-subnet-c1 | 10.0.2.0/24
-private-subnet-a1 | 10.0.3.0/24
-private-subnet-c1 | 10.0.4.0/24
-private-subnet-a2 | 10.0.5.0/24
-private-subnet-c2 | 10.0.6.0/24
+| Name | IPv4 CIDR | Route Table
+-- | -- | --
+public-subnet-a1 | 10.0.1.0/24 | public-subnet-rt
+public-subnet-c1 | 10.0.2.0/24 | 위와 동일
+private-subnet-a1 | 10.0.3.0/24 | private-subnet-a1-rt
+private-subnet-c1 | 10.0.4.0/24 | private-subnet-c1-rt
+private-subnet-a2 | 10.0.5.0/24 | private-subnet-a2-rt
+private-subnet-c2 | 10.0.6.0/24 | private-subnet-c2-rt
 
 
-<!-- notionvc: 18340e09-21a9-407c-b52d-0ca0421046f9 --><!--EndFragment-->
-</body>
-</html>
 
 <img width="754" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/e863fadd-88b0-4f44-96e2-35bc43107249">
 <br><br>
