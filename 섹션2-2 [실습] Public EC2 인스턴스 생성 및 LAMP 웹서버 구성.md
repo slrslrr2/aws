@@ -263,3 +263,94 @@ find /var/www -type f -exec chmod 0664 {} \;
 # /var/www 디렉토리 및 하위 파일들에 대해 쓰기 권한이 없는 다른 사용자들도 읽기와 쓰기를 할 수 있도록 권한을 설정합니다.
 
 ```
+
+<br>
+---
+
+<br>
+
+## 연결이 되었음을 확인하고 ssh로 접속해보자
+
+```
+ssh -i ./ec2-public-seoul.pem ec2-user@3.37.35.84
+```
+
+<img width="211" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/af1a49e2-542e-409a-856b-7f34a0bc8725">
+
+ec2-user로 접속 시 10.0.1.77(프라이빗 주소로) 접속됨을 확인할 수 있다.
+
+<img width="421" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/6c36d59b-575b-4d53-a935-80e1dbd864f5">
+
+index.php를 생성하여 아래 내용을 적어준다.
+
+```
+<?php include "dbinfo.inc"; ?>
+<html>
+<body>
+<h1>Instance data</h1>
+<?php
+
+  echo "<table>";
+  echo "<tr><th>Data</th><th>Value</th></tr>";
+
+  $urlRoot="http://169.254.169.254/latest/meta-data/";
+
+  echo "<tr><td>Instance ID</td><td><i>" . file_get_contents($urlRoot . 'instance-id') . "</i></td><tr>";
+  echo "<tr><td>Private IP Address</td><td><i>" . file_get_contents($urlRoot . 'local-ipv4') . "</i></td><tr>";
+  echo "<tr><td>Public IP Address</td><td><i>" . file_get_contents($urlRoot . 'public-ipv4') . "</i></td><tr>";
+  echo "<tr><td>Availability Zone</td><td><i>" . file_get_contents($urlRoot . 'placement/availability-zone') . "</i></td><tr>";
+
+  echo "</table>";
+
+?>
+<h1>RDS Practice</h1>
+<?php
+
+  /* Connect to MySQL and select the database. */
+  $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+
+  if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+
+  $database = mysqli_select_db($connection, DB_DATABASE);
+
+?>
+
+<!-- Display table data. -->
+<table border="1" cellpadding="2" cellspacing="2">
+  <tr>
+    <td>ID</td>
+    <td>NAME</td>
+    <td>ADDRESS</td>
+  </tr>
+
+<?php
+
+$result = mysqli_query($connection, "SELECT * FROM SAMPLE");
+
+while($query_data = mysqli_fetch_row($result)) {
+  echo "<tr>";
+  echo "<td>",$query_data[0], "</td>",
+       "<td>",$query_data[1], "</td>",
+       "<td>",$query_data[2], "</td>";
+  echo "</tr>";
+}
+?>
+
+</table>
+
+<!-- Clean up. -->
+<?php
+
+  mysqli_free_result($result);
+  mysqli_close($connection);
+
+?>
+
+</body>
+</html>
+```
+
+<br>
+<img width="742" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/2dd6e2cc-7d54-458f-8c64-5ceb5e10ea5d">
+
+
