@@ -3,12 +3,12 @@
 <br>
 
 
-현재 상황
+현재 상황<br>
 <img width="939" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/8678a02a-4fee-4bf1-8e7f-cbe3c9532f4f">
 
 <br><br>
 
-적용예정
+적용예정<br>
 
 <img width="942" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/6ccfe96e-8fa9-4153-98ab-fa85778fb756">
 
@@ -48,3 +48,31 @@
 그럼 아래와 같이 인스턴스가 추가됨을 확인할 수 있다.
 
 <img width="1501" alt="8" src="https://github.com/slrslrr2/aws/assets/58017318/fdf82fa0-33b7-4b6a-8d36-38b8b182f537">
+
+<br>
+
+----
+<br>
+
+## 3. Elastic IP를 할당하여 위 만들어진 EC2의 고정IP를 만들어준다.
+<img width="658" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/71a539b4-8749-4c48-82c5-ed8a3f01b9ee">
+<img width="659" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/d215fab1-4464-428c-8d1a-9cc3da5fe68b">
+
+해당 인스턴스의 Elastic IP할당을 확인한다.
+
+<br>
+<img width="1536" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/10cdf331-e77b-48d4-9842-47934aac5622">
+
+<br>
+ssh 접속해본다.
+
+```
+ssh -i ./ec2-public-seoul.pem ec2-user@13.124.9.38
+```
+
+또한, AMI가 어디 인스턴스에 접속이 되어있는지 확인가능하다.
+
+
+
+<img width="1726" alt="4" src="https://github.com/slrslrr2/aws/assets/58017318/c0ac5126-acf2-43ae-904e-f77129587f89">
+
