@@ -138,3 +138,32 @@ wget https://lab-s3-web-hosting-gbitkim.s3.amazonaws.com/mycar.html
 
 
 해당 efs의 경로에 생긴 파일은 해당 EFS와 연동된 EC2 폴더에 공유된다.
+
+
+<br>
+-----
+<br>
+
+## 4. Public EC2안에 EFS 마운드 작업한다.
+
+```
+1  cd /var/www/html/
+2  mkdir efs
+3  yum install amazon-efs-utils -y
+4  sudo mount -t efs -o tls fs-059bb7082fd6dabb6:/ efs
+```
+
+가용영역 a에 있는 EC2에, 
+공유된 efs파일들이 표시되어있는지 확인한다.
+
+<img width="436" alt="6" src="https://github.com/slrslrr2/aws/assets/58017318/d9c05f76-b37b-4f5f-9ac0-a6fb4d3f8285">
+
+가용영역 a에 있는 EC2에, 
+공유된 efs파일들이 표시되어있는지 확인한다.
+
+<img width="436" alt="7" src="https://github.com/slrslrr2/aws/assets/58017318/eeeaf59b-077f-4ec9-a92b-aac8e5b18fdc">
+
+df -h 를 통해 efs가 마운팅됨을 확인한다
+<img width="391" alt="8" src="https://github.com/slrslrr2/aws/assets/58017318/21d231ea-f4ff-4391-a326-703edbf5399f">
+
+
