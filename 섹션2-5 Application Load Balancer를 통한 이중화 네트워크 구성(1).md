@@ -130,3 +130,21 @@ Port: Load Balancer에서 들어오는 연결을 수신하는 포트를 지정�
 - TargetGroup : HTTP:80
 <img width="849" alt="8" src="https://github.com/slrslrr2/aws/assets/58017318/0736e222-1c4d-4c17-8b13-2ceccb00a146">
 
+<br>
+
+-----
+<br>
+
+## 3. ALB 기능 확인
+
+ALB에 설정한 Target Group에 따라 ALB가 되는지 확인해본다.
+ALB의 DNS를 확인하고 브라우저에서 입력하면 다음과 같은 화면이 뜬다.
+
+<img width="944" alt="9" src="https://github.com/slrslrr2/aws/assets/58017318/5db3a7cc-216b-44f6-a362-ea94b1b25ef8">
+
+확인해보면 TargetGroup에 설정한 EC2들이 번갈아가며 나오는것임을 확인할 수 있다.
+
+<br>
+<img width="791" alt="10" src="https://github.com/slrslrr2/aws/assets/58017318/b62a231b-cf22-48e9-8b5f-ead7c3155dde">
+<img width="734" alt="11" src="https://github.com/slrslrr2/aws/assets/58017318/a5350380-834a-4d7f-a07b-d28e67abb024">
+<img width="1488" alt="12" src="https://github.com/slrslrr2/aws/assets/58017318/10bc9be8-c571-40dc-931a-3f65c13e5f54">
