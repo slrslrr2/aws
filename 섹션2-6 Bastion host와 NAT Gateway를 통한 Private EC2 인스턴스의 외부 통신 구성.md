@@ -36,3 +36,36 @@ NAT Gateway는 보안 그룹 및 네트워크 ACL을 통해 허용된 트래픽�
 주로 내부 리소스가 외부 서비스에 접근해야 하는 경우에 사용됩니다.
 ```
 
+<br>
+
+---
+<br>
+
+## 1. Private subnet에 EC2 생성
+
+<img width="634" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/193f5cba-55ba-4d0d-a3c8-ee77c3b9d109">
+
+<img width="632" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/08045f11-4989-49df-b295-ef92ac83d90a">
+
+
+private ec2를 위한 키페어를 생성하겠습니다.
+
+
+
+
+<img width="631" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/917df419-1166-499a-a5b4-5b29b3b4a1bc">
+<img width="491" alt="4" src="https://github.com/slrslrr2/aws/assets/58017318/95c361a7-091a-4565-b27f-b280ce7368dd">
+
+
+
+<img width="599" alt="5" src="https://github.com/slrslrr2/aws/assets/58017318/1d7d2aa1-1516-4e67-bdc3-8d80e0deea24">
+<img width="606" alt="6" src="https://github.com/slrslrr2/aws/assets/58017318/3aec696a-0b4d-4759-b63f-481c03e42676">
+
+<img width="630" alt="7" src="https://github.com/slrslrr2/aws/assets/58017318/264e06a0-75cd-4fea-945b-b7a7b0e45adf">
+<img width="631" alt="8" src="https://github.com/slrslrr2/aws/assets/58017318/997a4ae6-7cab-4586-8d90-c4c9831578ba">
+<img width="629" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/a2a60317-da78-4aaf-bb19-c05b8328a036">
+<img width="626" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/31e7d0e9-ef94-4480-8eb7-78ee5f40dcc4">
+
+<br>
+private EC2 생성을 확인한다.
+<img width="1540" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/29b9618d-a947-46a5-a9e3-45d206e89b5b">
