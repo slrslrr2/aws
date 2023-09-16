@@ -69,3 +69,65 @@ private ec2를 위한 키페어를 생성하겠습니다.
 <br>
 private EC2 생성을 확인한다.
 <img width="1540" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/29b9618d-a947-46a5-a9e3-45d206e89b5b">
+
+
+<br>
+
+---
+<br>
+
+## 2. Public subnet의 EC2를 통해 Private subnet EC2 접속(key pair 생성)
+
+Public EC2에 접근한다.
+
+```
+geumbit@gimgeumbich-ui-MacBookPro pem % ssh -i ./ec2-public-seoul.pem ec2-user@3.37.35.84
+Last login: Tue Aug 15 01:46:35 2023 from 222.109.121.90
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+16 package(s) needed for security, out of 26 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-10-0-1-77 ~]$ pwd
+/home/ec2-user
+```
+
+<br>
+private keypair시 생성한 ec2-private-seoul.pem 를 생성한다.
+
+```
+[ec2-user@ip-10-0-1-77 ~]$ vi ec2-private-seoul.pem
+```
+
+만약 pem의 권한이 너무 많으면 아래와 같이 뜬다
+
+```
+Permissions 0664 for './ec2-private-seoul.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "./ec2-private-seoul.pem": bad permissions
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+```
+<br>
+때문에, 아래 명령어로 모드를 변경 후, 접속한다.
+
+```
+[ec2-user@ip-10-0-1-77 ~]$ chmod 400 ec2-private-seoul.pem
+```
+
+<br>
+
+```
+[ec2-user@ip-10-0-1-77 ~]$ ssh -i ./ec2-private-seoul.pem ec2-user@10.0.3.165
+Last login: Mon Jul 31 09:03:29 2023 from 121.140.89.153
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+```
+이렇게하면 public EC2를 통해 Private로 접속하였다.
