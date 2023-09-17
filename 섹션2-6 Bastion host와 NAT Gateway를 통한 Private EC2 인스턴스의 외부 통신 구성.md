@@ -131,3 +131,55 @@ Last login: Mon Jul 31 09:03:29 2023 from 121.140.89.153
 https://aws.amazon.com/amazon-linux-2/
 ```
 이렇게하면 public EC2를 통해 Private로 접속하였다.
+
+
+
+<br>
+---
+<br>
+
+## 3. NAT Gateway 생성
+
+**NAT Gateway**는 사설 네트워크에서 **공용 네트워크로 나가는 트래픽**을 관리하는 역할을 수행합니다. 
+NAT Gateway는 IP를 기반으로 통신한다.
+이는 외부인터넷과 통신해야하므로 고정으로 Elastic IP를 생성해야한다.
+
+<br>
+
+NAT 게이트웨이를 생성할 서브넷을 
+
+igw와 연동된 `public-subnet-a1`로 설정함으로써, 인터넷 게이트웨이와 연동할 수 있다.
+
+<img width="806" alt="5" src="https://github.com/slrslrr2/aws/assets/58017318/5c5c6d5e-763d-4f15-8163-6f5d04149560">
+
+
+<br>
+----
+
+<br>
+
+## 4. Route table 설정 - NatGate way와 Private EC2 연결 
+
+
+<img width="761" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/f0de8e5e-29ec-4528-ace6-e74d081234ae">
+
+<img width="941" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/5b02a94c-3e4b-4113-831a-0c2914345551">
+
+
+위와같이 설정하면 Private 의 응답의 도착지를 Destination의 `0.0.0.0/0`으로 설정됨으로써,
+ 모든 트래픽은 Target이 모두 nat-gw-a1로 모두 이동이된다.
+
+또한 위에 nat-gw-a1에 설정된 Elastic IP 고정 IP설정을 확인할 수 있다.
+
+
+<img width="818" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/833b5a94-f7af-4fe1-ac22-6bc7fa1efc8c">
+
+하여, 결과적으로 private EC2가 외부와 통신이 가능함을 확인할 수 있다.
+
+
+<img width="389" alt="4" src="https://github.com/slrslrr2/aws/assets/58017318/9e84dfc4-07d6-42c2-b839-37e3ce028ef9">
+
+
+즉, private subnet 위치한 EC2는 외부로 향하는 트래픽인 NAT Gateway로 연결되고
+
+NAT Gateway는 Internet Gateway로 연결되어 외부 통신이 가능하게됩니다.
