@@ -42,10 +42,12 @@ WebServer를 public 영역에 두는것은 보안적인 측면에 위험할 수 
 
 <img width="756" alt="1" src="https://github.com/slrslrr2/aws/assets/58017318/dbeb208c-eb6e-47c4-9f8b-c4eaf666d916">
 <img width="743" alt="2" src="https://github.com/slrslrr2/aws/assets/58017318/24e0f2c1-b386-4616-a563-eb8c32e7f424">
+
+<br>
 ALB의 네트워크매핑의 경우, **public**을 선택해야한다
 
 네트워크 인터페이스가 인터넷 게이트웨이를 통해 통신을 하게해야하기에 public을 선택해야한다.
-
+하여 TargetGroup을 Private로 설정함으로써, Private EC2로 통신이 된다. 
 <br>
 
 <img width="745" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/9b828fc6-7476-4f9d-a66a-7e8613bfff67">
@@ -54,10 +56,12 @@ ALB의 Security Group을 생성한다.
 <br><br>
 
 <img width="1548" alt="4" src="https://github.com/slrslrr2/aws/assets/58017318/6828bd23-2d9f-43ce-a50c-f58c2134ffbf">
+<br>
 <img width="1546" alt="5" src="https://github.com/slrslrr2/aws/assets/58017318/1ce9ed31-19f1-4aec-904d-39fb6e506656">
+<br>
 <img width="879" alt="6" src="https://github.com/slrslrr2/aws/assets/58017318/c3656a51-fe80-4866-94aa-4c585414f863">
-<img width="877" alt="7" src="https://github.com/slrslrr2/aws/assets/58017318/838d3a2e-a8b5-401a-8d3d-a30cb7e16915">
-<img width="1512" alt="8" src="https://github.com/slrslrr2/aws/assets/58017318/7f7720e4-932d-4f01-93a3-2eb01a2c1c4c">
-<img width="732" alt="9" src="https://github.com/slrslrr2/aws/assets/58017318/eef93b42-3941-4e10-b67d-c547d83dcd00">
+<br><img width="877" alt="7" src="https://github.com/slrslrr2/aws/assets/58017318/838d3a2e-a8b5-401a-8d3d-a30cb7e16915">
+<br><img width="1512" alt="8" src="https://github.com/slrslrr2/aws/assets/58017318/7f7720e4-932d-4f01-93a3-2eb01a2c1c4c">
+<br><img width="732" alt="9" src="https://github.com/slrslrr2/aws/assets/58017318/eef93b42-3941-4e10-b67d-c547d83dcd00">
 <img width="755" alt="10" src="https://github.com/slrslrr2/aws/assets/58017318/10b8b66c-ae0c-4bc4-8f2e-08c1d4616aa7">
 
