@@ -57,8 +57,13 @@
 
 <img width="611" alt="3" src="https://github.com/slrslrr2/aws/assets/58017318/2baecab3-7849-47dc-89ef-aedad528a2c0">
 <br>
+
+db.t2.micro는 subnet영역 2곳 이상인경우 요금이 부과됩니다.
+
 <img width="612" alt="4" src="https://github.com/slrslrr2/aws/assets/58017318/f59d238d-e48b-4dbd-bb68-6f9930c32510">
-<br><img width="611" alt="5" src="https://github.com/slrslrr2/aws/assets/58017318/e26073ae-2ac5-4345-80ad-9600ff19d787">
+<br>
+[Storage autoscaling]은 RDS 저장공간이 부족할 경우 자동으로 저장공간을 확장하는 기능입니다.
+<img width="611" alt="5" src="https://github.com/slrslrr2/aws/assets/58017318/e26073ae-2ac5-4345-80ad-9600ff19d787">
 <br><img width="610" alt="6" src="https://github.com/slrslrr2/aws/assets/58017318/04add12d-2a21-4f75-8b41-a3ee216797b7">
 <br><img width="615" alt="7" src="https://github.com/slrslrr2/aws/assets/58017318/52d5eaf2-f451-4a32-bec3-b99527fa7535">
 <br><img width="612" alt="8" src="https://github.com/slrslrr2/aws/assets/58017318/10b721ad-0e34-481a-91dd-c83d270d58f2">
