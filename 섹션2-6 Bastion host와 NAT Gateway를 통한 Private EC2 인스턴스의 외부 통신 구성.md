@@ -1,6 +1,7 @@
 # 섹션2-6 Bastion host와 NAT Gateway를 통한 Private EC2 인스턴스의 외부 통신 구성
 
 <br>
+
 ## Bastion host와 NAT Gateway를 통한 Private EC2 인스턴스의 외부 통신 구성
 
 1. Private subnet에 EC2 생성
@@ -135,7 +136,7 @@ https://aws.amazon.com/amazon-linux-2/
 
 
 <br>
----
+
 <br>
 
 ## 3. NAT Gateway 생성
@@ -154,7 +155,7 @@ igw와 연동된 `public-subnet-a1`로 설정함으로써, 인터넷 게이트�
 
 
 <br>
-----
+
 
 <br>
 
