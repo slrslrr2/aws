@@ -104,7 +104,7 @@ private-subnet-c2 | 10.0.6.0/24 | private-subnet-c2-rt
 <html>
 <body>
 <!--StartFragment-->
-Name | IPv4 CIDR | Route Table
+| Name | IPv4 CIDR | Route Table
 -- | -- | --
 public-subnet-a1 | 10.0.1.0/24 | public-subnet-rt
 public-subnet-c1 | 10.0.2.0/24 | 위와 동일
