@@ -26,7 +26,6 @@ EC2와 EFS 사이의 트래픽의 Protocal, Port의 이동 허용에 대한 Secu
 
 
 <br>
------
 <br>
 
 ## 2. EFS를 생성
@@ -67,7 +66,7 @@ IA 외부로 전환 : 이후 이동된 파일을 다시 EFS경로로 원복하�
 
 
 <br>
------
+
 <br>
 
 ## 3. public ec2에 EFS 관련 연결 Install
@@ -141,7 +140,7 @@ wget https://lab-s3-web-hosting-gbitkim.s3.amazonaws.com/mycar.html
 
 
 <br>
------
+
 <br>
 
 ## 4. Public EC2안에 EFS 마운드 작업한다.
