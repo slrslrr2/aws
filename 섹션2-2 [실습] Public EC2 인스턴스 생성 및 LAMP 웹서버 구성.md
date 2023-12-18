@@ -265,7 +265,8 @@ find /var/www -type f -exec chmod 0664 {} \;
 ```
 
 <br>
----
+
+---- 
 
 <br>
 
